@@ -21,7 +21,7 @@ body::before {
     height: 100%;
     
     /* Replace with your background image URL or complex gradient */
-    background-image: url('favicon.ico');
+    background-image: url('');
     background-size: cover;
     background-position: center;
     

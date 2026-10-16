@@ -1,7 +1,6 @@
 {
 	"name": "Angela",
-	"description": "Scramjet Demo App",
-	"repository": "https://github.com/.../Scramjet-Demo",
-	"logo": "https://raw.githubusercontent.com/MercuryWorkshop/scramjet/main/assets/scramjet.png",
+	"description": "scramjet app fork",
+	"repository": "https://github.com/absolutegoaat/Angela",
 	"keywords": ["scramjet"]
 }
