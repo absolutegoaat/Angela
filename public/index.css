@@ -3,10 +3,32 @@
 body {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     margin: 0;
-    background: #080d1a; /* Deep rich midnight blue background */
+    background: #080d1a; /* Deep rich midnight blue background fallback */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Create a pseudo-element for the background image and blur */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Replace with your background image URL or complex gradient */
+    background-image: url('favicon.ico');
+    background-size: cover;
+    background-position: center;
+    
+    /* Apply the blur */
+    filter: blur(20px);
+    z-index: -1;
+    transform: scale(1.05);
 }
 
 .flex-center {
@@ -119,49 +141,6 @@ footer a:hover {
     border-radius: 6px;
 }
 
-.credit {
-    border-radius: 10px;
-    padding: 10px;
-    display: block;
-    border: 1px solid rgba(56, 189, 248, 0.3);
-    background: rgba(10, 15, 30, 0.6);
-    color: #f0f9ff;
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 15px;
-}
-
-.credit label {
-    margin-left: auto;
-    margin-right: 15px;
-}
-
-.credit a,
-.credit label {
-    color: #38bdf8; /* Blue accent */
-    text-decoration: underline;
-    text-align: right;
-}
-
-.credit a:hover {
-    color: #7dd3fc;
-}
-
-.credit pre {
-    display: none;
-    width: 100%;
-    color: #94a3b8;
-}
-
-.credit label::after {
-    content: "show license";
-    cursor: pointer;
-}
-
-.credit input:checked + label::after {
-    content: "hide license";
-}
-
-.credit input:checked ~ pre {
-    display: block;
+#sj-address:hover {
+    box-shadow: 0 0 12px rgba(14, 165, 233, 0.4);
 }
