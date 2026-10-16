@@ -10,7 +10,7 @@
 
 		<link rel="shortcut icon" content="favicon.webp" />
 	
-		<script src="/scram/scramjet.all.js"></script>
+		<!--scramjet usually gets detected with contentkeeper so this has to be renamed or something.-->
 		<script src="/baremux/index.js"></script>
 		
 		<link rel="stylesheet" href="index.css" />
@@ -26,25 +26,23 @@
 			<h1>Angela</h1>
 		</div>
 
-		<form id="sj-form" class="flex-center">
+		<form id="an-form" class="flex-center">
 			<input
-				id="sj-search-engine"
+				id="an-search-engine"
 				value="https://www.google.com/search?q=%s"
 				type="hidden"
 			/>
-			<input id="sj-address" type="text" placeholder="Search the web freely" />
+			<input id="an-address" type="text" placeholder="Go crazy." />
 		</form>
 		<div class="desc left-margin">
-			<p id="sj-error"></p>
-			<pre id="sj-error-code"></pre>
+			<p id="an-error"></p>
+			<pre id="an-error-code"></pre>
 		</div>
 		<footer>
 			<div>
-				<a
-					title="My Github Profile"
-					href="https://github.com/absolutegoaat"
-					>GitHub</a
-				>
+				<a href="https://github.com/absolutegoaat">
+					GitHub
+				</a>
 			</div>
 			<div>
 				<span>Angela &copy; MW 2026</span>

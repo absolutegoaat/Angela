@@ -2,23 +2,23 @@
 /**
  * @type {HTMLFormElement}
  */
-const form = document.getElementById("sj-form");
+const form = document.getElementById("an-form");
 /**
  * @type {HTMLInputElement}
  */
-const address = document.getElementById("sj-address");
+const address = document.getElementById("an-address");
 /**
  * @type {HTMLInputElement}
  */
-const searchEngine = document.getElementById("sj-search-engine");
+const searchEngine = document.getElementById("an-search-engine");
 /**
  * @type {HTMLParagraphElement}
  */
-const error = document.getElementById("sj-error");
+const error = document.getElementById("an-error");
 /**
  * @type {HTMLPreElement}
  */
-const errorCode = document.getElementById("sj-error-code");
+const errorCode = document.getElementById("an-error-code");
 
 const { ScramjetController } = $scramjetLoadController();
 
