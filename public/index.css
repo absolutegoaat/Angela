@@ -1,17 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 body {
-    font-family: "Google Sans", Arial, Helvetica, sans-serif;
+    font-family: "IBM Plex Sans", Arial, Helvetica, sans-serif;
     margin: 0;
-    background: #080d1a; /* Deep rich midnight blue background fallback */
+    background: #030d0f;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
+
+    --blur-amount: 3px;
 }
 
-/* Create a pseudo-element for the background image and blur */
 body::before {
     content: "";
     position: absolute;
@@ -19,16 +20,15 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    
-    /* Replace with your background image URL or complex gradient */
-    background-image: url('');
+
+    background-image: url('/background.jpg');
     background-size: cover;
-    background-position: center;
-    
-    /* Apply the blur */
-    filter: blur(20px);
+    background-position: top;
+
+    filter: blur(var(--blur-amount));
     z-index: -1;
     transform: scale(1.05);
+    transition: filter 0.2s ease;
 }
 
 .flex-center {
@@ -53,57 +53,76 @@ body::before {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #080d1a;
+    background-color: #030d0f;
 }
 
 #an-error {
-    color: #ff6666 !important;
+    color: #ff6b9d !important; /* Pink-red to complement the teal */
     white-space: pre-wrap;
 }
 
 #an-error-code {
     font-size: 12px;
-    color: #38bdf8;
+    color: #2dd4bf; /* Teal to match image */
     font-family: "Courier New", Courier, monospace;
 }
 
 .logo {
-    font-family: "Libre Caslon Condensed", serif;
     height: 25vh;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(45, 212, 191, 0.4); /* Teal glow matching image */
+}
+
+.header {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 25px;
 }
 
 .logo-wrapper .text {
     font-size: 75px;
-    color: #f0f9ff;
-    text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+    color: #e0ffff; /* Ice white with teal tint */
+    text-shadow:
+        0 0 20px rgba(45, 212, 191, 0.5),  /* Teal glow */
+        0 0 40px rgba(168, 85, 247, 0.2);   /* Purple glow matching halo */
 }
 
 .logo-wrapper h1 {
-    color: #f0f9ff;
+    color: #e0ffff;
+    text-shadow: 0 0 15px rgba(45, 212, 191, 0.4);
 }
 
 footer {
-    margin: 0 16px;
+    margin: 16px;
     margin-top: auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
     line-height: 30px;
     margin-bottom: 20px;
+    background-color: rgba(3, 20, 22, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(45, 212, 191, 0.15);
+    padding-top: 10px;
+    border-radius: 10px;
 }
 
 footer > div {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 15px;
+    width: 100%;
 }
 
 footer a,
 footer span {
     margin: 0 15px;
     text-decoration: none;
-    color: #38bdf8; /* Bright electric blue */
+    color: #2dd4bf;
     font-size: 15px;
 }
 
@@ -112,36 +131,87 @@ footer a {
 }
 
 footer a:hover {
-    color: #7dd3fc; /* Lighter cyan-blue on hover */
+    color: #a78bfa;
     text-decoration: underline;
+}
+
+footer .disclaimer {
+    margin: 0 100px;
+    color: rgba(167, 243, 235, 0.65); /* slightly muted to show it's a disclaimer */
+    font-size: 13px; /* slightly smaller */
 }
 
 .desc p {
     width: 560px;
-    color: rgba(147, 197, 253, 0.6); /* Soft icy blue text */
+    color: rgba(167, 243, 235, 0.65); /* Soft teal-white text */
+    align-items: center;
 }
 
 #an-address {
-    background: rgba(15, 23, 42, 0.6);
+    background: rgba(3, 20, 22, 0.6);
     font-family: inherit;
     padding: 0px 17px;
     height: 48px;
-    border: 1px solid rgba(56, 189, 248, 0.3);
-    color: var(--text-color);
+    border: 1px solid rgba(45, 212, 191, 0.3); /* Teal border */
+    color: #fff;
     border-radius: 50px;
     outline: none;
     width: 350px;
     margin-top: 5px;
-    color: #fff;
     transition: all 0.2s ease;
 }
 
 #an-address:focus {
-    border: 1px solid #0ea5e9; /* Vibrant electric blue border on focus */
-    box-shadow: 0 0 12px rgba(14, 165, 233, 0.4);
+    border: 1px solid #2dd4bf;
+    box-shadow: 0 0 12px rgba(45, 212, 191, 0.4); /* Teal glow on focus */
     border-radius: 6px;
 }
 
 #an-address:hover {
-    box-shadow: 0 0 12px rgba(14, 165, 233, 0.4);
+    box-shadow: 0 0 12px rgba(45, 212, 191, 0.3);
+}
+
+#Page404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh; /* center vertically on full page */
+    margin: 0;
+}
+
+#Page404 > div {
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 30px;
+    padding: 20px 40px;
+    background-color: rgba(3, 20, 22, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(45, 212, 191, 0.15);
+    border-radius: 10px;
+}
+
+/* Add these to match your main page */
+#Page404 h1 {
+    color: #e0ffff;
+    font-family: "Lora", serif;
+    text-shadow: 0 0 15px rgba(45, 212, 191, 0.4);
+}
+
+#Page404 p {
+    color: rgba(167, 243, 235, 0.65);
+}
+
+#Page404 a {
+    color: #2dd4bf;
+    text-decoration: none;
+}
+
+#Page404 a:hover {
+    color: #a78bfa;
+    text-decoration: underline;
 }
