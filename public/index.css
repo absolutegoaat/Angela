@@ -215,3 +215,16 @@ footer .disclaimer {
     color: #a78bfa;
     text-decoration: underline;
 }
+
+#rain-canvas {
+    filter: blur(var(--blur-amount, 3px));
+    transition: filter 0.4s ease;
+}
+
+#rain-canvas {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}

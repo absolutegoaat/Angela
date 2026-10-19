@@ -1,6 +1,8 @@
 # Angela
 
 A fork of Scramjet-App by MercuryWorkshop.
+<br>
+fuck javascript projects imma just vibecode this bs, i hate javascript
 
 ## Setup / Usage
 
