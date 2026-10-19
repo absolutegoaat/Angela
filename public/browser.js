@@ -65,21 +65,6 @@ async function ensureFrame(entry) {
 	return entry.frame;
 }
 
-function unwrapProxyUrl(rawUrl) {
-	try {
-		const idx = rawUrl.indexOf(PROXY_MARKER);
-		if (idx === -1) return rawUrl;
-		const parts = rawUrl.slice(idx + PROXY_MARKER.length).split("/");
-		if (parts.length < 3) return rawUrl;
-		let encodedTarget = parts.slice(2).join("/");
-		const q = encodedTarget.indexOf("?");
-		if (q !== -1) encodedTarget = encodedTarget.slice(0, q);
-		return decodeURIComponent(encodedTarget);
-	} catch (_) {
-		return rawUrl;
-	}
-}
-
 function normalizeUrl(u) {
 	try {
 		return new URL(u).href;
@@ -153,7 +138,7 @@ function createTab(url) {
 			} catch (_) {}
 
 			if (live && live.includes(PROXY_MARKER)) {
-				const real = unwrapProxyUrl(live);
+				const real = $scramjet.unrewriteUrl(live, entry.frame.context);
 				const current = entry.history[entry.historyIndex];
 				if (!current || normalizeUrl(real) !== normalizeUrl(current)) {
 					entry.history = entry.history.slice(0, entry.historyIndex + 1);
