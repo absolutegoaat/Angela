@@ -14,6 +14,9 @@ importers:
       '@mercuryworkshop/epoxy-transport':
         specifier: 3.0.1
         version: 3.0.1
+      '@mercuryworkshop/libcurl-transport':
+        specifier: ^2.0.5
+        version: 2.0.5
       '@mercuryworkshop/scramjet':
         specifier: 2.0.67-alpha.2
         version: 2.0.67-alpha.2
@@ -136,6 +139,9 @@ packages:
 
   '@mercuryworkshop/epoxy-transport@3.0.1':
     resolution: {integrity: sha512-8YzL73WaXZJLBRydmmY6NNPt5leB8ygBYuqgLn4+pGQ+wgi+JUC7ZdBQrA86TR6Oue3twbdfDvLRp48bzZ7DSw==}
+
+  '@mercuryworkshop/libcurl-transport@2.0.5':
+    resolution: {integrity: sha512-YkAPEAWTEUZZkEOejmRQJxNHw90+kNQnoiSqa5H2sExHBXXdGSXEtg7/35A53U8MDVaznpAwjVbXRONSsfatzw==}
 
   '@mercuryworkshop/proxy-transports@1.0.2':
     resolution: {integrity: sha512-zgD+JMYNSx8LxVLWwGPPVnoDHjoh1GqqwUJIjhIwCwhy+Z7g+MhmiTJvCcRPAo7qXXbqJwIrpBJduRSOrjMV7g==}
@@ -520,6 +526,9 @@ packages:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
 
+  libcurl.js@0.7.4:
+    resolution: {integrity: sha512-UpvVirvATP7fD0t4rnsxVRuUpPVIo2QvWj4+5JrMsd1KSEvYkON36+COOPAl88hPlGJddk+DfZRvyF7KG7YcSA==}
+
   light-my-request@6.8.0:
     resolution: {integrity: sha512-5Q8PjoSEdtGIB8fikZsTem5vgRo4F2mR6vUKTDW/H1g6MtAt8e3duQbg/QxL5yzg6BZhor2KOUm3hhWMWLTZwg==}
 
@@ -863,6 +872,10 @@ snapshots:
   '@mercuryworkshop/epoxy-transport@3.0.1':
     dependencies:
       '@mercuryworkshop/epoxy-tls': 2.1.19-1
+
+  '@mercuryworkshop/libcurl-transport@2.0.5':
+    dependencies:
+      libcurl.js: 0.7.4
 
   '@mercuryworkshop/proxy-transports@1.0.2': {}
 
@@ -1264,6 +1277,8 @@ snapshots:
     dependencies:
       prelude-ls: 1.2.1
       type-check: 0.4.0
+
+  libcurl.js@0.7.4: {}
 
   light-my-request@6.8.0:
     dependencies:

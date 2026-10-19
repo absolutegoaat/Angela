@@ -15,10 +15,9 @@ const controllerPath = fileURLToPath(
 const epoxyPath = fileURLToPath(
 	new URL("../node_modules/@mercuryworkshop/epoxy-transport/dist/", import.meta.url)
 );
-
-// Debug: Verify the directory actually contains what you expect
-readdir(scramjetPath).catch(err => console.error("Failed to read scramjetPath:", err))
-  .then(files => files && console.log("scramjetPath contents:", files));
+const libcurlPath = fileURLToPath(
+	new URL("../node_modules/@mercuryworkshop/libcurl-transport/dist/", import.meta.url)
+);
 
 logging.set_level(logging.NONE);
 Object.assign(wisp.options, {
@@ -43,6 +42,12 @@ const fastify = Fastify({
 fastify.register(fastifyStatic, {
 	root: publicPath,
 	decorateReply: true,
+});
+
+fastify.register(fastifyStatic, {
+	root: libcurlPath,
+	prefix: "/libcurl/",
+	decorateReply: false,
 });
 
 fastify.register(fastifyStatic, {

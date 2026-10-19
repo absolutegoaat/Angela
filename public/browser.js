@@ -2,7 +2,6 @@
 
 const { Controller } = $scramjetController;
 const { defaultConfig } = $scramjet;
-const EpoxyTransport = self.EpoxyTransport.default;
 
 const DEFAULT_SEARCH = "https://www.duckduckgo.com/search?q=%s";
 const PROXY_MARKER = "/~/sj/";
@@ -36,7 +35,9 @@ function getController() {
 				location.host +
 				"/wisp/";
 
-			const transport = new EpoxyTransport({ wisp: wispUrl });
+			const mod = await import("/libcurl/index.mjs");
+			const LibcurlClient = mod.LibcurlClient ?? mod.default;
+			const transport = new LibcurlClient({ wisp: wispUrl });
 			await transport.init();
 
 			const controller = new Controller({
