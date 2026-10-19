@@ -1,230 +1,237 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 
 body {
-    font-family: "IBM Plex Sans", Arial, Helvetica, sans-serif;
-    margin: 0;
-    background: #030d0f;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    position: relative;
-    overflow: hidden;
+	font-family: "IBM Plex Sans", Arial, Helvetica, sans-serif;
+	margin: 0;
+	background: #030d0f;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	position: relative;
+	overflow: hidden;
 
-    --blur-amount: 3px;
+	--blur-amount: 3px;
 }
 
 body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 
-    background-image: url('/background.jpg');
-    background-size: cover;
-    background-position: top;
+	background-image: url("/background.jpg");
+	background-size: cover;
+	background-position: top;
 
-    filter: blur(var(--blur-amount));
-    z-index: -1;
-    transform: scale(1.05);
-    transition: filter 0.2s ease;
+	filter: blur(var(--blur-amount));
+	z-index: -1;
+	transform: scale(1.05);
+	transition: filter 0.2s ease;
 }
 
 .flex-center {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .header-center {
-    align-items: center;
-    flex-direction: column;
-    margin-top: 10%;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 10%;
 }
 
 .left-margin {
-    margin: 0px 16px;
+	margin: 0px 16px;
 }
 
 #sj-frame {
-    border: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #030d0f;
+	border: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #030d0f;
 }
 
 #an-error {
-    color: #ff6b9d !important; /* Pink-red to complement the teal */
-    white-space: pre-wrap;
+	color: #ff6b9d !important; /* Pink-red to complement the teal */
+	white-space: pre-wrap;
 }
 
 #an-error-code {
-    font-size: 12px;
-    color: #2dd4bf; /* Teal to match image */
-    font-family: "Courier New", Courier, monospace;
+	font-size: 12px;
+	color: #2dd4bf; /* Teal to match image */
+	font-family: "Courier New", Courier, monospace;
 }
 
 .logo {
-    height: 25vh;
-    border-radius: 50%;
-    box-shadow: 0 0 30px rgba(45, 212, 191, 0.4); /* Teal glow matching image */
+	height: 25vh;
+	border-radius: 50%;
+	box-shadow: 0 0 30px rgba(45, 212, 191, 0.4); /* Teal glow matching image */
 }
 
 .header {
-    font-family: "Lora", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-size: 25px;
+	font-family: "Lora", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-size: 25px;
 }
 
 .logo-wrapper .text {
-    font-size: 75px;
-    color: #e0ffff; /* Ice white with teal tint */
-    text-shadow:
-        0 0 20px rgba(45, 212, 191, 0.5),  /* Teal glow */
-        0 0 40px rgba(168, 85, 247, 0.2);   /* Purple glow matching halo */
+	font-size: 75px;
+	color: #e0ffff; /* Ice white with teal tint */
+	text-shadow:
+		0 0 20px rgba(45, 212, 191, 0.5),
+		/* Teal glow */ 0 0 40px rgba(168, 85, 247, 0.2); /* Purple glow matching halo */
 }
 
 .logo-wrapper h1 {
-    color: #e0ffff;
-    text-shadow: 0 0 15px rgba(45, 212, 191, 0.4);
+	color: #e0ffff;
+	text-shadow: 0 0 15px rgba(45, 212, 191, 0.4);
 }
 
 footer {
-    margin: 16px;
-    margin-top: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 30px;
-    margin-bottom: 20px;
-    background-color: rgba(3, 20, 22, 0.55);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(45, 212, 191, 0.15);
-    padding-top: 10px;
-    border-radius: 10px;
+	margin: 16px;
+	margin-top: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	line-height: 30px;
+	margin-bottom: 20px;
+	background-color: rgba(3, 20, 22, 0.55);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border: 1px solid rgba(45, 212, 191, 0.15);
+	padding-top: 10px;
+	border-radius: 10px;
 }
 
 footer > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 15px;
-    width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: 15px;
+	width: 100%;
 }
 
 footer a,
 footer span {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #2dd4bf;
-    font-size: 15px;
+	margin: 0 15px;
+	text-decoration: none;
+	color: #2dd4bf;
+	font-size: 15px;
 }
 
 footer a {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 footer a:hover {
-    color: #a78bfa;
-    text-decoration: underline;
+	color: #a78bfa;
+	text-decoration: underline;
 }
 
 footer .disclaimer {
-    margin: 0 100px;
-    color: rgba(167, 243, 235, 0.65); /* slightly muted to show it's a disclaimer */
-    font-size: 13px; /* slightly smaller */
+	margin: 0 100px;
+	color: rgba(
+		167,
+		243,
+		235,
+		0.65
+	); /* slightly muted to show it's a disclaimer */
+	font-size: 13px; /* slightly smaller */
 }
 
 .desc p {
-    width: 560px;
-    color: rgba(167, 243, 235, 0.65); /* Soft teal-white text */
-    align-items: center;
+	width: 560px;
+	color: rgba(167, 243, 235, 0.65); /* Soft teal-white text */
+	align-items: center;
 }
 
 #an-address {
-    background: rgba(3, 20, 22, 0.6);
-    font-family: inherit;
-    padding: 0px 17px;
-    height: 48px;
-    border: 1px solid rgba(45, 212, 191, 0.3); /* Teal border */
-    color: #fff;
-    border-radius: 50px;
-    outline: none;
-    width: 350px;
-    margin-top: 5px;
-    transition: all 0.2s ease;
+	background: rgba(3, 20, 22, 0.6);
+	font-family: inherit;
+	padding: 0px 17px;
+	height: 48px;
+	border: 1px solid rgba(45, 212, 191, 0.3); /* Teal border */
+	color: #fff;
+	border-radius: 50px;
+	outline: none;
+	width: 350px;
+	margin-top: 5px;
+	transition: all 0.2s ease;
 }
 
 #an-address:focus {
-    border: 1px solid #2dd4bf;
-    box-shadow: 0 0 12px rgba(45, 212, 191, 0.4); /* Teal glow on focus */
-    border-radius: 6px;
+	border: 1px solid #2dd4bf;
+	box-shadow: 0 0 12px rgba(45, 212, 191, 0.4); /* Teal glow on focus */
+	border-radius: 6px;
 }
 
 #an-address:hover {
-    box-shadow: 0 0 12px rgba(45, 212, 191, 0.3);
+	box-shadow: 0 0 12px rgba(45, 212, 191, 0.3);
 }
 
 #Page404 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100vh; /* center vertically on full page */
-    margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 100vh; /* center vertically on full page */
+	margin: 0;
 }
 
 #Page404 > div {
-    margin: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 30px;
-    padding: 20px 40px;
-    background-color: rgba(3, 20, 22, 0.55);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(45, 212, 191, 0.15);
-    border-radius: 10px;
+	margin: 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	line-height: 30px;
+	padding: 20px 40px;
+	background-color: rgba(3, 20, 22, 0.55);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border: 1px solid rgba(45, 212, 191, 0.15);
+	border-radius: 10px;
 }
 
 /* Add these to match your main page */
 #Page404 h1 {
-    color: #e0ffff;
-    font-family: "Lora", serif;
-    text-shadow: 0 0 15px rgba(45, 212, 191, 0.4);
+	color: #e0ffff;
+	font-family: "Lora", serif;
+	text-shadow: 0 0 15px rgba(45, 212, 191, 0.4);
 }
 
 #Page404 p {
-    color: rgba(167, 243, 235, 0.65);
+	color: rgba(167, 243, 235, 0.65);
 }
 
 #Page404 a {
-    color: #2dd4bf;
-    text-decoration: none;
+	color: #2dd4bf;
+	text-decoration: none;
 }
 
 #Page404 a:hover {
-    color: #a78bfa;
-    text-decoration: underline;
+	color: #a78bfa;
+	text-decoration: underline;
 }
 
 #rain-canvas {
-    filter: blur(var(--blur-amount, 3px));
-    transition: filter 0.4s ease;
+	filter: blur(var(--blur-amount, 3px));
+	transition: filter 0.4s ease;
 }
 
 #rain-canvas {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    z-index: -1;
-    pointer-events: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	pointer-events: none;
 }

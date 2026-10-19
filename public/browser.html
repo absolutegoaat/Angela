@@ -1,35 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-    <title>Angela</title>
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+		/>
+		<title>Angela</title>
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-    <script src="/libcurl/index.js"></script>
-    <script src="/scramjet/scramjet.js"></script>
-    <script src="/controller/controller.api.js"></script>
-    <script src="/epoxy/index.js"></script>
+		<script src="/libcurl/index.js"></script>
+		<script src="/scramjet/scramjet.js"></script>
+		<script src="/controller/controller.api.js"></script>
+		<script src="/epoxy/index.js"></script>
 
-    <link rel="stylesheet" href="browser.css" />
-    <script src="register-sw.js" defer></script>
-    <script src="search.js" defer></script>
-    <script src="browser.js" defer></script>
-    <script src="https://kit.fontawesome.com/0e1bbc1e62.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div id="browser-container">
-        <div id="browser-tabs"></div>
-        <div id="browser-header">
-            <button id="btn-back" aria-label="Back" disabled><i class="fa-solid fa-arrow-left-long"></i></button>
-            <button id="btn-forward" aria-label="Forward" disabled><i class="fa-solid fa-arrow-right-long"></i></button>
-            <button id="btn-refresh" aria-label="Refresh"><i class="fa-solid fa-sync-alt"></i></button>
-            <input id="address-bar" type="text" placeholder="Search or enter address" spellcheck="false" />
-			<button id="btn-backtomainsite" aria-label="Back to main site"><i class="fa-solid fa-house"></i></button>
-        </div>
-        <div id="browser-content"></div>
-    </div>
-</body>
+		<link rel="stylesheet" href="browser.css" />
+		<script src="register-sw.js" defer></script>
+		<script src="search.js" defer></script>
+		<script src="browser.js" defer></script>
+		<script
+			src="https://kit.fontawesome.com/0e1bbc1e62.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div id="browser-container">
+			<div id="browser-tabs"></div>
+			<div id="browser-header">
+				<button id="btn-back" aria-label="Back" disabled>
+					<i class="fa-solid fa-arrow-left-long"></i>
+				</button>
+				<button id="btn-forward" aria-label="Forward" disabled>
+					<i class="fa-solid fa-arrow-right-long"></i>
+				</button>
+				<button id="btn-refresh" aria-label="Refresh">
+					<i class="fa-solid fa-sync-alt"></i>
+				</button>
+				<input
+					id="address-bar"
+					type="text"
+					placeholder="Search or enter address"
+					spellcheck="false"
+				/>
+				<button id="btn-backtomainsite" aria-label="Back to main site">
+					<i class="fa-solid fa-house"></i>
+				</button>
+			</div>
+			<div id="browser-content"></div>
+		</div>
+	</body>
 </html>

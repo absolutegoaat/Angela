@@ -88,7 +88,6 @@ function normalizeUrl(u) {
 	}
 }
 
-
 function setActiveTab(index) {
 	if (index === activeTabIndex) return;
 
