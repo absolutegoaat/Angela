@@ -25,6 +25,7 @@
 		"@mercuryworkshop/scramjet-controller": "0.0.14",
 		"@mercuryworkshop/wisp-js": "^0.4.1",
 		"fastify": "^5.7.4",
+		"morgan": "^1.12.1",
 		"ws": "^8.18.3"
 	},
 	"devDependencies": {
